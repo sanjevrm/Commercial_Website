@@ -1,5 +1,6 @@
 # Ex02 Commercial Website
-## Date:
+## Date:17.03.2025
+## REG NO:212223040186
 
 ## AIM
 To create a commercial website using CSS Flexbox.
@@ -51,9 +52,185 @@ Deploy the website.
 Upload to GitHub Pages for free hosting.
 
 ## PROGRAM
-
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 10px 15px;
+        }
+        nav a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url('realestate-hero.jpg') no-repeat center center/cover;
+            height: 400px;
+            color: white;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+        }
+        .properties {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            gap: 20px;
+        }
+        .property {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            width: 300px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .property img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .property-details {
+            padding: 15px;
+        }
+        .property-details h3 {
+            margin: 0 0 10px;
+        }
+        .property-details p {
+            margin: 0 0 15px;
+            color: #555;
+        }
+        .property-details a {
+            text-decoration: none;
+            color: white;
+            background-color: #007BFF;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+        .property-details a:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dream Homes Real Estate</h1>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#properties">Properties</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="home" class="home">
+        <div style="text-align: center; padding: 50px;">
+            <h2>Welcome to Dream Homes Real Estate</h2>
+            <p>We specialize in connecting you with your dream home. Whether you're looking for a luxury villa, a modern apartment, or a cozy cottage, we have the perfect property for you.</p>
+            <a href="#properties" style="text-decoration: none; color: white; background-color: #007BFF; padding: 10px 20px; border-radius: 5px;">Browse Properties</a>
+        </div>
+    </section>
+    <section class="hero">
+        <h1>Find Your Dream Home Today</h1>
+    </section>
+    <section id="properties" class="properties">
+        <div class="property">
+            <img src="download.jpeg" alt="House 1">
+            <div class="property-details">
+                <h3>Luxury Villa</h3>
+                <p>RS 1,200,000 - 4 Beds, 3 Baths</p>
+                <a href="#">View Details</a>
+            </div>
+        </div>
+        <div class="property">
+            <img src="download (1).jpeg" alt="House 2">
+            <div class="property-details">
+                <h3>Modern Apartment</h3>
+                <p>RS 850,000 - 3 Beds, 2 Baths</p>
+                <a href="#">View Details</a>
+            </div>
+        </div>
+        <div class="property">
+            <img src="images.jpeg" alt="House 3">
+            <div class="property-details">
+                <h3>Cozy Cottage</h3>
+                <p>RS 450,000 - 2 Beds, 1 Bath</p>
+                <a href="#">View Details</a>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="about" style="background-color: #f9f9f9; padding: 50px;">
+        <div style="max-width: 800px; margin: auto; text-align: center;">
+            <h2>About Us</h2>
+            <p>Dream Homes Real Estate has been helping families find their perfect homes for over a decade. Our team of experienced agents is dedicated to providing exceptional service and ensuring a smooth buying or renting process. We pride ourselves on offering a wide range of properties to suit every lifestyle and budget.</p>
+            <p>Our mission is to make your dream of owning a home a reality.</p>
+        </div>
+    </section>
+    <section id="contact" class="contact" style="padding: 50px;">
+        <div style="max-width: 600px; margin: auto; text-align: center;">
+            <h2>Contact Us</h2>
+            <p>Have questions or need assistance? We're here to help!</p>
+            <p>Email: <a href="mailto:info@dreamhomes.com">info@dreamhomes.com</a></p>
+            <p>Phone: <a href="tel:+1234567890">+91 2356789100</a></p>
+            <p>Address: 123 Dream Street, Real Estate City, chennai</p>
+            <form style="margin-top: 20px;">
+                <input type="text" placeholder="Your Name" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                <input type="email" placeholder="Your Email" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                <textarea placeholder="Your Message" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px;"></textarea>
+                <button type="submit" style="background-color: #007BFF; color: white; padding: 10px 20px; border: none; border-radius: 5px;">Send Message</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2023 Dream Homes Real Estate. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+```
 
 ## OUTPUT
+
+![Screenshot 2025-03-17 154921](https://github.com/user-attachments/assets/375751f6-5ac9-42dd-88c0-401b0b87701d)
+![Screenshot 2025-03-17 154950](https://github.com/user-attachments/assets/4f8ec578-5758-4636-998f-aae4af5bfc51)
+![Screenshot 2025-03-17 155010](https://github.com/user-attachments/assets/adc4f2da-1d03-469f-a050-538197c38fa4)
+
+
 
 
 ## RESULT
